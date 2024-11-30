@@ -1,0 +1,11 @@
+.error {
+    color:red;
+    background-color: whitesmoke;
+    width: fit-content;
+    height: auto;
+    text-align: center;
+}
+
+.error::first-letter {
+    font-size: 2em;
+}

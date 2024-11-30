@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(49, 49, 49);
+}
+.wrapper {
+    position: relative;
+    top: 100px;
+    width: 600px;
+    left: 200px;
+  
+}
+.flexBox {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.weekNames * {
+    border-bottom: 1px solid green;  
+    font-weight: 700;
+    background-color: rgb(13, 113, 144);
+    color: white;
+    
+}
+.weekNames *:hover {
+   
+    cursor: pointer;
+}
+
+.flexBox * {  
+    display: block;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(13,113,144,0.2);
+}
+.monthHeader {
+    justify-content:space-between;
+    align-items: center;
+    width: max-content;
+    width: auto;
+
+}
+.monthHeader * {
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: rgb(13, 113, 144);
+   
+}
+.prevMonth {
+    background-color: red;
+}
+.nextMonth {
+    background-color: red;
+}
+
+.active {
+    background-color: green;
+}
