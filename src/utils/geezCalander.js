@@ -71,8 +71,8 @@ export const handleDayAndMonth = (day, month, year) => {
         ? { day: day % 30, month: 2, year: year + 1 }
         : { day, month: 1, year: year + 1 };
     }
-    if (day <= 6) return { day, month: 13, year };
-    day -= 6;
+    if (day <= 5) return { day, month: 13, year };
+    day -= 5;
     return day > 30
       ? { day: day % 30, month: 2, year: year + 1 }
       : { day, month: 1, year: year + 1 };
