@@ -30,20 +30,28 @@ const dateReducer = (state, action) => {
       break;
   }
 };
-
+const [month, day, year] = Intl.DateTimeFormat("en-u-ca-ethiopic", {
+  day: "numeric",
+  month: "numeric",
+  year: "numeric",
+})
+  .format(new Date())
+  .split(" ")[0]
+  .split("/");
 const initialState = {
-  year: 2017,
-  month: 1,
-  johnNumber: 2,
+  day: parseInt(day),
+  month: parseInt(month),
+  year: parseInt(year),
 };
 
 const Day = () => {
   const [state, dispatch] = useReducer(dateReducer, initialState);
+  const [today, setToday] = useState(initialState);
   useEffect(() => {
-    console.log(johnsNumber(0, 1, 2017));
+    console.log(state);
   }, [state]);
   return (
-    <DayContext.Provider value={{ state, dispatch }}>
+    <DayContext.Provider value={{ state, dispatch, today }}>
       <div className="wrapper">
         <MonthHeader />
         <WeekNames />

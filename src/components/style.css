@@ -6,12 +6,13 @@ body {
     top: 100px;
     width: 600px;
     left: 200px;
+    
   
 }
 .flexBox {
    display: flex;
    flex-direction: row;
-   justify-content: center;
+   align-items: end;
 }
 
 .weekNames * {
@@ -33,20 +34,34 @@ body {
     text-align: center;
     border: 1px solid rgba(13,113,144,0.2);
 }
+
 .monthHeader {
-    justify-content:space-between;
-    align-items: center;
-    width: max-content;
-    width: auto;
+display:flex;
+flex-direction: row;
+justify-content: flex-end;
+
 
 }
 .monthHeader * {
-    outline: none;
-    border: none;
-    padding: 10px;
-    color: rgb(13, 113, 144);
+    display: block;
+    width: 70px;
+    text-align:right;
+color: rgb(147, 197, 255);
    
 }
+.monthHeader span {
+    padding: 3px;
+    padding-bottom:10px;
+   
+}
+.monthHeader :not(span){
+ width: 30px;
+ 
+}
+.monthHeader :not(span):hover{
+      scale: 1.02;
+      cursor: pointer;
+   }
 .prevMonth {
     background-color: red;
 }
@@ -55,5 +70,11 @@ body {
 }
 
 .active {
-    background-color: green;
+    color: rgb(2, 24, 53);
+    font-weight: 900;
+    color: white;
+}
+.today {
+    background-color: rgb(4, 142, 206);
+    border-radius: 5%;
 }

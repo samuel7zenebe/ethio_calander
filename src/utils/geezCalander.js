@@ -83,3 +83,47 @@ export const handleDayAndMonth = (day, month, year) => {
     ? { day: day % 30, month: month + 1, year }
     : { day, month, year };
 };
+
+export const MonthNames = (month) => {
+  switch (month) {
+    case 1:
+      return "Septemper";
+      break;
+    case 2:
+      return "October";
+      break;
+    case 3:
+      return "November";
+      break;
+    case 4:
+      return "December";
+      break;
+    case 5:
+      return "January";
+      break;
+    case 6:
+      return "February";
+      break;
+    case 7:
+      return "March";
+      break;
+    case 8:
+      return "April";
+      break;
+    case 9:
+      return "May";
+      break;
+    case 10:
+      return "June";
+      break;
+    case 11:
+      return "July";
+      break;
+    case 12:
+      return "August";
+      break;
+    case 13:
+      return "Paquamen";
+      break;
+  }
+};

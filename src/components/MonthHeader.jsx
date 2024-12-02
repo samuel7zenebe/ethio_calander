@@ -1,9 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import DayContext from "./DayContext";
 import "./style.css";
+import { MonthNames } from "../utils/geezCalander";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const MonthHeader = (pros) => {
   const { state, dispatch } = useContext(DayContext);
+  const [status, setStatus] = useState("");
 
   const nextMonthHandler = (e) => {
     if (state.month === 13) {
@@ -30,11 +33,14 @@ const MonthHeader = (pros) => {
   };
   return (
     <>
-      <div className="flexBox monthHeader">
-        <span onClick={lastMonthHandler}>Prev</span>
-        <span>Month {state.month}</span>
-        <span onClick={nextMonthHandler}>Next</span>
-        <span>{state.year}</span>
+      <div className="">
+        <div className="status">{status}</div>
+        <div className="monthHeader">
+          <ChevronLeft onClick={lastMonthHandler} />
+          <span> {MonthNames(state.month)}</span>
+          <span>{state.year}</span>
+          <ChevronRight onClick={nextMonthHandler} />
+        </div>
       </div>
     </>
   );
