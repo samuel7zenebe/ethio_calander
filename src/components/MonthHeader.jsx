@@ -4,7 +4,7 @@ import "./style.css";
 import { MonthNames } from "../utils/geezCalander";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const MonthHeader = (pros) => {
+const MonthHeader = () => {
   const { state, dispatch } = useContext(DayContext);
   const [status, setStatus] = useState("");
 

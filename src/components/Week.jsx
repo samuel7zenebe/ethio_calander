@@ -8,22 +8,22 @@ export const Week = ({ month, year, week }) => {
   const weekDays = fetchFullMonth(1, month, year).filter((x) => x.week == week);
 
   return (
-    <div className="flexBox">
+    <tr className="flexBox">
       {weekDays.map((x, index) => (
-        <span
+        <td
           onMouseOver={() => {}}
           className={`${
             x.day == today.day && x.month == today.month && x.year == today.year
-              ? "today"
+              ? "today cell"
               : x.month == month
-              ? "active"
-              : ""
+              ? "active cell"
+              : "inactive cell"
           }`}
           key={index}
         >
           {x.day}
-        </span>
+        </td>
       ))}
-    </div>
+    </tr>
   );
 };

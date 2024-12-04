@@ -9,7 +9,10 @@ import DayContext from "./DayContext";
 import { Week } from "./Week";
 import WeekNames from "./WeekNames";
 import MonthHeader from "./monthHeader";
+import Month from "./Month";
+import { Year } from "./Year";
 import { fetchFullMonth, johnsNumber } from "../utils/geezCalander";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const dateReducer = (state, action) => {
   switch (action.type) {
@@ -48,19 +51,13 @@ const Day = () => {
   const [state, dispatch] = useReducer(dateReducer, initialState);
   const [today, setToday] = useState(initialState);
   useEffect(() => {
-    console.log(state);
+    console.log();
   }, [state]);
   return (
     <DayContext.Provider value={{ state, dispatch, today }}>
+      <MonthHeader />
       <div className="wrapper">
-        <MonthHeader />
-        <WeekNames />
-        <Week month={state.month} year={state.year} week={1} />
-        <Week month={state.month} year={state.year} week={2} />
-        <Week month={state.month} year={state.year} week={3} />
-        <Week month={state.month} year={state.year} week={4} />
-        <Week month={state.month} year={state.year} week={5} />
-        <Week month={state.month} year={state.year} week={6} />
+        <Year />
       </div>
     </DayContext.Provider>
   );

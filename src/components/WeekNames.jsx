@@ -2,15 +2,15 @@ import "./style.css";
 
 const WeekNames = () => {
   return (
-    <div className="flexBox weekNames">
-      <span>Monday</span>
-      <span>Tuesday</span>
-      <span>Wednesday</span>
-      <span>Thursday</span>
-      <span>Friday</span>
-      <span>Saturday</span>
-      <span>Sunday</span>
-    </div>
+    <thead className="flexBox weekNames">
+      <th className="cell">MON</th>
+      <th className="cell">TUE</th>
+      <th className="cell">WED</th>
+      <th className="cell">THU</th>
+      <th className="cell">FRI</th>
+      <th className="cell">SAT</th>
+      <th className="cell">SUN</th>
+    </thead>
   );
 };
 

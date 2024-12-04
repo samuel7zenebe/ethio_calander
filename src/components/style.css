@@ -1,80 +1,89 @@
 body {
-    background-color: rgb(49, 49, 49);
+    background-color: #333333;
+    color: #FFFFFF;
 }
 .wrapper {
-    position: relative;
-    top: 100px;
-    width: 600px;
-    left: 200px;
-    
-  
+    background-color: #333333;
+}
+.monthContainer {
+        background-color: #464646;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 4px;
 }
 .flexBox {
    display: flex;
    flex-direction: row;
-   align-items: end;
+   align-items: start;
+   justify-content: center;
 }
-
 .weekNames * {
-    border-bottom: 1px solid green;  
-    font-weight: 700;
-    background-color: rgb(13, 113, 144);
-    color: white;
-    
+    color: #F04D23;
+    font-weight: 900;
 }
 .weekNames *:hover {
-   
     cursor: pointer;
 }
-
-.flexBox * {  
-    display: block;
-    width: 70px;
-    padding: 10px;
+.cell {
+    min-width: 40px;
+    min-height: 40px;
     text-align: center;
-    border: 1px solid rgba(13,113,144,0.2);
+    margin-top: 2px;
+    padding-top: 20px;
 }
-
 .monthHeader {
 display:flex;
 flex-direction: row;
-justify-content: flex-end;
-
-
+justify-content: center;
+align-items: center;
+height: 6vh;
 }
 .monthHeader * {
     display: block;
-    width: 70px;
-    text-align:right;
-color: rgb(147, 197, 255);
-   
+    text-align:center;  
+    font-size: 19px;
+    width: 100px;
 }
-.monthHeader span {
-    padding: 3px;
-    padding-bottom:10px;
-   
-}
+
 .monthHeader :not(span){
- width: 30px;
- 
+ width: 40px;
 }
 .monthHeader :not(span):hover{
       scale: 1.02;
       cursor: pointer;
    }
-.prevMonth {
-    background-color: red;
+.inactive {
+    color: #7e7d7d;
 }
-.nextMonth {
-    background-color: red;
-}
-
 .active {
-    color: rgb(2, 24, 53);
-    font-weight: 900;
-    color: white;
+  font-weight: bold; 
+  color: #FFFFFF;
+  border-radius: 50%;
 }
 .today {
-    background-color: rgb(4, 142, 206);
-    border-radius: 5%;
+    line-height: normal;
+    background-color:#F04D23;
+}
+.yearLayout {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 4;  
+}
+.header {
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(230, 234, 235);   
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+}
+.activeMonth {
+    background-color: #1b1a1a;
+    border-radius: 10px;
+}
+.header {
+ color: #dadada;
 }
